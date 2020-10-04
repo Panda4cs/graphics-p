@@ -176,7 +176,7 @@ namespace GraphicsPackage
             drawFrag(MBx - y, MBy + x);
             drawFrag(MBx + y, MBy - x);
             drawFrag(MBx - y, MBy - x);
-            textBox5.Text = textBox5.Text + "( pointX:" + MBx + "±" + "arc(" + x + "," + y + "))" + "( pointY:" + MBy + "±" + "arc(" + x + "," + y + "))";
+            textBox5.Text = textBox5.Text + "( pointX:" + MBx + "±" + "arc(" + x + "," + y + "))," + "( pointY:" + MBy + "±" + "arc(" + x + "," + y + ")),";
 
             
 
@@ -285,7 +285,7 @@ namespace GraphicsPackage
             drawFrag2(MPx - x, MPy + y);
             drawFrag2(MPx + x, MPy - y);
             drawFrag2(MPx - x, MPy - y);
-            textBox5.Text = textBox5.Text + "( pointX:" + MPx + "±" + "arc(" + x + "," + y + "))°" + "( pointY:" + MPy + "±" + "arc(" + x + "," + y + "))°";
+            textBox5.Text = textBox5.Text + "( pointX:" + MPx + "±" + "arc(" + x + "," + y + "))°," + "( pointY:" + MPy + "±" + "arc(" + x + "," + y + "))°,";
 
 
         }
