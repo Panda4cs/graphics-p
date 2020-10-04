@@ -147,7 +147,7 @@ namespace GraphicsPackage
         void drawCircleFromMidpoint(int pointX, int pointY, int radius)
         {
             int x = 0, y = radius, pp = 1 - radius;
-
+            textBox5.Text = "";
             calculatePP(pointX, pointY, x, y);
 
             while (x < y)
@@ -176,6 +176,8 @@ namespace GraphicsPackage
             drawFrag(MBx - y, MBy + x);
             drawFrag(MBx + y, MBy - x);
             drawFrag(MBx - y, MBy - x);
+            textBox5.Text = textBox5.Text + "( pointX:" + MBx + "±" + "arc(" + x + "," + y + "))" + "( pointY:" + MBy + "±" + "arc(" + x + "," + y + "))";
+
             
 
         }
@@ -223,8 +225,8 @@ namespace GraphicsPackage
             float dx, dy, d1, d2, x, y;
             x = 0;
             y = ry;
-
-            // Initial decision parameter of region 1 
+            textBox5.Text = "";
+            // reg 1 arc
             d1 = (ry * ry) - (rx * rx * ry) + (0.25f * rx * rx);
             dx = 2 * ry * ry * x;
             dy = 2 * rx * rx * y;
@@ -283,7 +285,8 @@ namespace GraphicsPackage
             drawFrag2(MPx - x, MPy + y);
             drawFrag2(MPx + x, MPy - y);
             drawFrag2(MPx - x, MPy - y);
-            
+            textBox5.Text = textBox5.Text + "( pointX:" + MPx + "±" + "arc(" + x + "," + y + "))°" + "( pointY:" + MPy + "±" + "arc(" + x + "," + y + "))°";
+
 
         }
 
